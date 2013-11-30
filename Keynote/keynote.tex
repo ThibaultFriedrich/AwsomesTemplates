@@ -1,0 +1,116 @@
+\documentclass[20pt]{beamer}  %\documentclass[options]{beamer}
+%\usepackage[utf8]{inputenc} %chargement des packages
+%\usepackage{arev}
+
+\usepackage[scaled]{berasans}
+\renewcommand*\familydefault{\sfdefault}  %% Only if the base font of the
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %chargement des packages
+
+\usetheme{default} % "masque" du document : thème graphique (cf manuel de Beamer)
+\definecolor{extgray}{rgb}{0,0,0}
+\definecolor{centergray}{rgb}{0.294,0.294,0.294}
+\definecolor{lightgray}{rgb}{0.8,0.8,0.8}
+%\definecolor{white}{rgb}{0.294,0.294,0.294}
+\usepackage{tikz}
+\setbeamercolor{structure}{fg=white} 
+\setbeamercolor{normal text}{fg=white,bg=white}
+\setbeamercolor{alerted text}{fg=white}
+\setbeamercolor{example text}{fg=white}
+\setbeamersize{text margin left=0cm}
+\setbeamersize{text margin right=0cm}
+\setbeamersize{sidebar width left=1cm}
+\setbeamersize{sidebar width right=1cm}
+\setbeamersize{sidebar height top=1cm}
+\setbeamersize{sidebar height bottom=1cm}
+%\setbeamersize{text margin left=(1cm), text margin right=(1cm)}
+\setbeamertemplate{navigation symbols}
+{%
+}
+\usebackgroundtemplate{
+      \begin{tikzpicture}
+              \path [outer color = extgray, inner color = centergray]
+                    (0,0) rectangle (\paperwidth,\paperheight);
+      \end{tikzpicture}}
+
+\newcommand{\framet}[1]{\frametitle{\color{lightgray}{#1}}}
+
+\newcommand{\preztitle}{\bf KEYNOTE THEME}
+\newcommand{\prezsubtitle}{Perfection is coming}
+
+% http://fr.openclassrooms.com/informatique/cours/creez-vos-diaporamas-en-latex-avec-beamer/les-animations-3
+%\newcommand{\fadein}[1]{\transdissolve[duration=0.2]{#1}}
+\renewcommand{\titlepage}{\begin{center}{\large \preztitle}\\{\color{lightgray}\small
+    \prezsubtitle}\end{center}}
+%\renewenvironment{frame}{\begin{frame}\begin{center}}{\end{center}\end{frame}}
+
+    \graphicspath{images/} 
+
+\title{\preztitle}
+\author{}
+\date{}
+%\institute{URC PO}
+\begin{document}
+\centering
+
+\addtobeamertemplate{background}{\transfade[duration=1]}{}
+
+
+\begin{frame}
+   \titlepage 
+\end{frame}
+
+
+%\begin{frame} % 1ère diapo
+    %\fadein{\titlepage}
+%\end{frame}
+\begin{frame} % 3ème diapo
+    Beamer can be beautiful.
+\end{frame}
+\begin{frame} % 3ème diapo
+    Beamer is :
+    \begin{itemize}
+        \item <2-> Powerful
+        \item <3-> Fast
+        \item <4-> Easy 
+\end{itemize}
+\end{frame}
+\begin{frame} % 3ème diapo
+    \begin{quotation}
+        La beauté est un appui préférable à toutes les lettres de recommandation.
+\end{quotation}
+\begin{minipage}[t]{.6\textwidth}
+\raggedleft%
+\small Aristote
+\end{minipage}\footnote{Beauty is a
+    preferable to support
+    all letters of
+recommendation.}
+\end{frame}
+\begin{frame}
+    \only<1>{And I think you have noticed that:}
+    \visible<2>{ANIMATIONS ARE POSSIBLE}
+\end{frame}
+
+\begin{frame}
+        \begin{columns}
+        \begin{column}{4cm}
+            \begin{flushright}
+            And including images is also easy
+                
+            \end{flushright}
+        \end{column}
+        \begin{column}{4cm}
+            \vspace{-1cm}
+        \includegraphics[width=2cm]{robot.png}
+        \end{column}
+        \end{columns}
+\end{frame}
+
+\begin{frame}
+    \textbf{\large \LaTeX \ FOR EVER}
+
+    {\tiny Thibault FRIEDRICH}
+\end{frame}
+\end{document}
+
